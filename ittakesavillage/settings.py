@@ -149,7 +149,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'public'
-STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE="whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media
 MEDIA_ROOT = BASE_DIR / 'uploads/'
