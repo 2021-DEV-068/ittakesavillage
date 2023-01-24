@@ -169,6 +169,6 @@ BOOTSTRAP5 = {
 # https://django-filter.readthedocs.io/en/stable/ref/settings.html
 FILTERS_EMPTY_CHOICE_LABEL = ''
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/ittakesavillage/website')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 
