@@ -1,0 +1,300 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$VDfx8P4PJr6etNlhsytnrD$s/9K2X10NygltZFmWHsrUgN5YOg6J+bsWhKv2CmZ/iE=",
+      "last_login": "2022-12-28T17:13:23.789Z",
+      "is_superuser": true,
+      "username": "ndizera",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-12-16T18:59:26.198Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 1,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "08:00:00",
+      "end": "08:30:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 2,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "09:00:00",
+      "end": "10:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 3,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "10:00:00",
+      "end": "11:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 4,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "11:00:00",
+      "end": "11:30:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 5,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "13:00:00",
+      "end": "13:30:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 6,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "13:30:00",
+      "end": "14:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 7,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "14:00:00",
+      "end": "15:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 8,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "15:00:00",
+      "end": "16:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 9,
+    "fields": {
+      "specialist": 1,
+      "week_day": "Monday",
+      "start": "16:00:00",
+      "end": "17:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 10,
+    "fields": {
+      "specialist": 2,
+      "week_day": "Wednesday",
+      "start": "08:00:00",
+      "end": "09:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 11,
+    "fields": {
+      "specialist": 3,
+      "week_day": "Tuesday",
+      "start": "08:00:00",
+      "end": "10:00:00"
+    }
+  },
+  {
+    "model": "website.caregiverconsultationslot",
+    "pk": 12,
+    "fields": {
+      "specialist": 3,
+      "week_day": "Tuesday",
+      "start": "14:00:00",
+      "end": "16:00:00"
+    }
+  },
+  {
+    "model": "website.caregiver",
+    "pk": 1,
+    "fields": {
+      "first_name": "Léa",
+      "last_name": "Petit",
+      "email": "lea.petit@email.com",
+      "sex": "F",
+      "address": 1,
+      "profile_photo": "caregivers/profile/lea.webp",
+      "profile_video": "https://www.youtube.com/embed/G1Pp3yespPQ",
+      "languages": "[\"FR\", \"EN\", \"PT\"]",
+      "description": "Hello\r\nI'm Lea Petit a caregiver.",
+      "physical": true,
+      "online": false,
+      "conditions": "[\"Appointments: online\", \"at your home (Brussels area) or at the practitioner's office\", \"48h cancellation policy\"]",
+      "ranking": 4.2,
+      "number_comments": 125
+    }
+  },
+  {
+    "model": "website.caregiver",
+    "pk": 2,
+    "fields": {
+      "first_name": "Alicia",
+      "last_name": "Mukendi",
+      "email": "alicia.mukendi@email.com",
+      "sex": "F",
+      "address": 2,
+      "profile_photo": "caregivers/profile/alicia.webp",
+      "profile_video": "https://www.youtube.com/embed/G1Pp3yespPQ",
+      "languages": "[\"FR\"]",
+      "description": "Hello,\r\nI'm Alicia Mukendi.",
+      "physical": true,
+      "online": true,
+      "conditions": "[\"48h cancellation policy\"]",
+      "ranking": 4.1,
+      "number_comments": 45
+    }
+  },
+  {
+    "model": "website.caregiver",
+    "pk": 3,
+    "fields": {
+      "first_name": "Fred",
+      "last_name": "Ricard",
+      "email": "fred.ricard@email.com",
+      "sex": "M",
+      "address": 3,
+      "profile_photo": "caregivers/profile/fred.webp",
+      "profile_video": "https://www.youtube.com/embed/G1Pp3yespPQ",
+      "languages": "[\"EN\", \"FR\"]",
+      "description": "Hello, I'm Fred.",
+      "physical": true,
+      "online": false,
+      "conditions": "[\"48h cancellation policy\"]",
+      "ranking": 3.9,
+      "number_comments": 74
+    }
+  },
+  {
+    "model": "website.caregiveraddress",
+    "pk": 1,
+    "fields": {
+      "street": "Avenue de l'Héliport",
+      "street_no": "10",
+      "postal_code": 1000,
+      "city": "Brussels",
+      "country": "Belgium",
+      "latitude": 50.859589,
+      "longitude": 4.351273
+    }
+  },
+  {
+    "model": "website.caregiveraddress",
+    "pk": 2,
+    "fields": {
+      "street": "Boulevard Anspach",
+      "street_no": "10",
+      "postal_code": 1000,
+      "city": "Brussels",
+      "country": "Belgium",
+      "latitude": 50.84766,
+      "longitude": 4.34922
+    }
+  },
+  {
+    "model": "website.caregiveraddress",
+    "pk": 3,
+    "fields": {
+      "street": "Avenue d'Aurderghem",
+      "street_no": "201",
+      "postal_code": 1040,
+      "city": "Etterbeek",
+      "country": "Belgium",
+      "latitude": 50.83341,
+      "longitude": 4.38803
+    }
+  },
+  {
+    "model": "website.caregiverdiploma",
+    "pk": 1,
+    "fields": {
+      "caregiver": 1,
+      "name": "The International Hypnobirthing Mongan Method",
+      "year": 2019
+    }
+  },
+  {
+    "model": "website.caregiverdiploma",
+    "pk": 2,
+    "fields": {
+      "caregiver": 1,
+      "name": "International Board of Lactation Consultant (IBLC) Certification",
+      "year": 2018
+    }
+  },
+  {
+    "model": "website.caregiverspeciality",
+    "pk": 1,
+    "fields": {
+      "caregiver": 1,
+      "speciality": "Certified Breastfeeding Specialist",
+      "rate": "70.00"
+    }
+  },
+  {
+    "model": "website.caregiverspeciality",
+    "pk": 2,
+    "fields": {
+      "caregiver": 1,
+      "speciality": "HypnoBirthing® Childbirth Educator",
+      "rate": "120.00"
+    }
+  },
+  {
+    "model": "website.caregiverspeciality",
+    "pk": 3,
+    "fields": {
+      "caregiver": 2,
+      "speciality": "Midwife",
+      "rate": "70.00"
+    }
+  },
+  {
+    "model": "website.caregiverspeciality",
+    "pk": 4,
+    "fields": {
+      "caregiver": 3,
+      "speciality": "Parenting coach",
+      "rate": "50.00"
+    }
+  },
+  {
+    "model": "website.parent",
+    "pk": 1,
+    "fields": {
+      "user": 1
+    }
+  }
+]

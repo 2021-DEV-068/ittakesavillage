@@ -1,0 +1,63 @@
+{% load static i18n %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap.css' %}" >
+    <link rel="stylesheet" href="{% static 'website/bootstrap/icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'website/choicesjs/css/choices.css' %}">
+    <link rel="stylesheet" href="{% static 'website/leaflet/leaflet.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/parent.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+
+{% block navbar %}
+    {% include "website/parent/blocks/navbar.html" %}
+{% endblock %}
+
+<div class="container-fluid">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+
+
+
+<div class="container-fluid mb-3">
+    <hr>
+    <div class="row">
+        <div class="offset-md-1 col-md-4 d-flex align-items-center">
+            <span class="mb-3 mb-md-0 text-muted">© 2022 It Takes A Village</span>
+        </div>
+        <div class="col-md-2">
+            <small class="text-muted">
+                <a class="text-reset" href="https://www.freepik.com/free-vector/happy-young-family-with-baby-pediatrician-doctor_9649968.htm#query=parents%20baby&position=7&from_view=keyword">Image by pch.vector</a> on Freepik
+            </small>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+
+            <li class="ms-3"><i class="bi bi-twitter"></i></li>
+            <li class="ms-3"><i class="bi bi-instagram"></i></li>
+            <li class="ms-3"><i class="bi bi-facebook"></i></li>
+        </ul>
+    </div>
+</div>
+
+
+{% block javascript %}
+<script src="{% static 'website/bootstrap/js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'website/leaflet/leaflet.js' %}"></script>
+<script src="{% static 'website/choicesjs/js/choices.js' %}"></script>
+<script src="{% static 'website/js/form.js' %}"></script>
+<script src="{% static 'website/js/map.js' %}"></script>
+<script src="{% static 'website/js/parent.js' %}"></script>
+{% endblock javascript %}
+</body>
+
+</html>

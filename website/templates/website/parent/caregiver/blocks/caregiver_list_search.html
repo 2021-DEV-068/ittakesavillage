@@ -1,0 +1,27 @@
+{% load django_bootstrap5 %}
+<form method="get">
+    <div class="input-group mb-3">
+        <div class="form-floating">
+            <select name="speciality" class="form-select" id="id_speciality">
+                {% for option_speciality in form.speciality|dictsort:'data.label' %}
+                    <option value="{{ option_speciality }}"></option>
+                {% endfor %}
+            </select>
+
+            <label class="form-label" for="id_speciality">Speciality</label>
+        </div>
+        <span class="input-group-text">
+            <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a>
+        </span>
+    </div>
+
+    {% bootstrap_field form.speciality layout='floating' %}
+    {% bootstrap_field form.location layout='floating' %}
+    {% bootstrap_field form.language show_label=false %}
+    {% bootstrap_field form.appointments show_label=false %}
+    {% bootstrap_field form.sex layout='floating' %}
+
+    <button type="submit" class="btn btn-primary">
+        <i class="bi bi-search"></i>
+    </button>
+</form>

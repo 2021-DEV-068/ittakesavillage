@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load django_bootstrap5 %}
+{% load parent_extras %}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title"><i class="bi bi-currency-euro"></i> {{ caregiver.min_rate|floatformat }} - {{ caregiver.max_rate|floatformat }}</h4>
+        <hr class="border border-dark opacity-75">
+        <form action="{% url 'parent:appointment_create' caregiver.pk %}" method="post">
+            {% csrf_token %}
+
+            {% bootstrap_field form.speciality layout='floating' %}
+            {% bootstrap_field form.first_appointment %}
+
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+
+                </div>
+            </div>
+            {% show_appointment_calendar caregiver.consultation_slots 100 %}
+            <hr class="border border-primary opacity-75">
+            <button type="submit" class="btn btn-primary w-100">{% trans "Make an appointment" %}</button>
+        </form>
+    </div>
+</div>

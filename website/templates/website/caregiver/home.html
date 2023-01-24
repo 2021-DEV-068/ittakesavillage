@@ -1,0 +1,39 @@
+{% extends 'website/caregiver/layout.html' %}
+
+{% load static i18n %}
+
+
+{% block content %}
+    <div class="row mt-3 mx-3">
+        <div class="col-md-5 my-auto">
+            <h1 class="display-3">Reach out families</h1>
+            <p class="fw-lighter">{% lorem 20 w %}</p>
+            <a class="btn btn-primary" href="{% url 'caregiver:signup' %}" role="button">{% trans 'Join us' %}</a>
+        </div>
+
+        <div class="col-md-7 text-end">
+            <img src="{% static "website/img/family_consulting.jpg" %}" class="img-fluid" alt="">
+        </div>
+    </div>
+
+    <div class="row justify-content-around">
+        <div class="col-md-2">
+            <section>
+                <h2>Section 1</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+        <div class="col-md-2">
+            <section>
+                <h2>Section 2</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+        <div class="col-md-2">
+            <section>
+                <h2>Section 3</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

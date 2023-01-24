@@ -1,0 +1,20 @@
+{% extends "website/parent/layout.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row min-vh-100">
+    <div class="col-md-6 mt-3 order-md-1 vh-100 overflow-auto">
+        {% for caregiver in filter.qs %}
+            {% include "website/parent/caregiver/blocks/caregiver_list_item.html" with caregiver=caregiver item_number=forloop.counter slots=slots_by_specialist.0 days=days only %}
+        {% endfor %}
+    </div>
+    <div class="col-md-2 order-md-0 vh-100 bg-light">
+        <div class="sticky-md-top pt-3">
+            {% include "website/parent/caregiver/blocks/caregiver_list_search.html" with form=filter.form %}
+        </div>
+
+    </div>
+    <div id="map" class="col-md-4 d-none d-md-block order-md-2">
+    </div>
+</div>
+{% endblock content %}

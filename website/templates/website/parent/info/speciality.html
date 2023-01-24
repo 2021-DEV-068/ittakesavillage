@@ -1,0 +1,17 @@
+{% extends 'website/parent/layout.html' %}
+
+{% load static i18n %}
+
+{% block content %}
+    <div class="row mt-3 justify-content-around">
+        <div class="col-md-8">
+            <dl class="row">
+                {% for speciality in specialities %}
+                    <dt class="col-sm-4">{{ speciality }}</dt>
+                    <dd class="col-sm-8">{% lorem 20 w %}</dd>
+                {% endfor %}
+            </dl>
+        </div>
+
+    </div>
+{% endblock content %}

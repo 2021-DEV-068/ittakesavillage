@@ -1,0 +1,13 @@
+div.home {
+    background-image: url("../img/happy_family.jpg");
+    height: 60vh;
+}
+
+.small-font {
+    font-size: 0.65em;
+}
+
+.smaller-font {
+    font-size: 0.8em;
+    padding: 1px;
+}

@@ -1,0 +1,44 @@
+{% load static %}
+{% load parent_extras %}
+
+<div class="row  me-1">
+    <div class="card mb-3" id="card-{{ item_number }}">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <a href="{% url 'parent:caregiver_detail' caregiver.pk %}">
+                    <img src="{{ caregiver.profile_photo.url }}" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a class="text-reset" href="{% url 'parent:caregiver_detail' caregiver.pk %}">{{ caregiver.full_name }}</a>
+                        <small class="fs-6 fw-light ms-3">{% include 'website/parent/caregiver/blocks/rank.html' with ranking=4.5 number_comments=125 %}</small>
+                    </h5>
+                    <h6 class="card-subtitle fw-normal mb-2">{{ caregiver.speciality }}</h6>
+                    {% for speciality in caregiver.specialities.all %}
+                    <h6 class="card-subtitle fw-normal mb-2" data-bs-toggle="tooltip" data-bs-title="The {{ speciality.speciality }} is ...">
+                        {{ speciality.speciality }}
+                    </h6>
+                    {% endfor %}
+                    <p class="card-text text-muted"><small>{{ caregiver.address }}</small></p>
+                    <div
+                            class="map-marker"
+                            data-latitude="{{ caregiver.address.latitude }}"
+                            data-longitude="{{ caregiver.address.longitude }}"
+                            data-event="click"
+                            data-param="#card-{{ item_number }}"
+                    ></div>
+                </div>
+            </div>
+
+            <div class="col-4 my-auto">
+
+                    {% show_appointment_calendar caregiver.consultation_slots %}
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

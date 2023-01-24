@@ -1,0 +1,23 @@
+{% extends "website/parent/layout.html" %}
+
+{% block content %}
+<div class="row mt-3">
+
+    <div class="col-lg-6 col-xl-5 offset-lg-2">
+        {% include "website/parent/caregiver/blocks/caregiver_detail.html" with caregiver=caregiver only %}
+    </div>
+
+    <div class="col-lg-4 col-xl-3">
+        <div class="sticky-lg-top">
+
+            <div class="row pt-lg-5">
+                <div class="col-lg-10">
+                    {% include "website/parent/caregiver/blocks/availability.html" with caregiver=caregiver slots=slots %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}

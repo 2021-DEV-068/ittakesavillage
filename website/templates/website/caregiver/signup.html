@@ -1,0 +1,23 @@
+{% extends "website/caregiver/layout.html" %}
+
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+    <div class="row mt-md-3">
+        <div class="col-md-3 mx-auto">
+            <h3>Join us</h3>
+            <form method="post" class="form">
+                {% csrf_token %}
+                {% bootstrap_form_errors form %}
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-primary">
+                    {% trans "Submit" %}
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

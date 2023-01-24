@@ -1,0 +1,104 @@
+{% load i18n static %}
+<div class="row mb-md-3">
+    <div class="col-md-3">
+        <img src="{{ caregiver.profile_photo.url }}" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-9">
+        <h4>
+            {{ caregiver.full_name }}
+            <small class="fs-6 fw-light ms-3">{% include 'website/parent/caregiver/blocks/rank.html' with ranking=caregiver.ranking number_comments=caregiver.number_comments %}</small>
+        </h4>
+
+        {% for speciality in caregiver.specialities.all %}
+            <span class="badge rounded-pill text-bg-info">{{speciality.speciality}}</span>
+        {% endfor %}
+
+        <p><i class="bi bi-geo-alt-fill"></i> {{ caregiver.address }}</p>
+    </div>
+</div>
+
+
+<div class="ratio ratio-16x9">
+    <iframe
+            src="{{ caregiver.profile_video}}"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        <i class="bi bi-person-square"></i> Profile
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            {{ caregiver.description }}
+        </p>
+
+        <dl class="row">
+            <dt class="col-sm-4"><i class="bi bi-globe"></i> Languages</dt>
+            <dd class="col-sm-8">
+                {% for language in caregiver.languages_names %}
+                    {{ language }}{% if not forloop.last %},{% endif %}
+                {% endfor %}
+            </dd>
+        </dl>
+
+        <hr>
+
+        <dl class="row">
+            <dt class="col-sm-4"><i class="bi bi-mortarboard"></i> {% trans 'Diploma' %}</dt>
+            <dd class="col-sm-8">
+                <table class="table table-sm">
+                    <tbody>
+                        {% for diploma in caregiver.diplomas.all %}
+                        <tr>
+                            <td>{{ diploma.name }}</td>
+                            <td>{{ diploma.year }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>-</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </dd>
+        </dl>
+
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        <i class="bi bi-currency-euro"></i> Prices
+    </div>
+    <div class="card-body">
+        <table class="table ">
+            <tbody>
+            {% for speciality in caregiver.specialities.all %}
+                <tr>
+                    <td>{{ speciality.speciality }}</td>
+                    <td>{{ speciality.rate|floatformat }} <i class="bi bi-currency-euro"></i></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="card mt-3">
+    <div class="card-header">
+    <i class="bi bi-info-circle"></i>  Conditions
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            {% for condition in caregiver.conditions %}
+            <li class="list-group-item">{{ condition }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>

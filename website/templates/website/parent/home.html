@@ -1,0 +1,79 @@
+{% extends 'website/parent/layout.html' %}
+
+{% load static i18n %}
+{% load django_bootstrap5 %}
+
+
+{% block content %}
+    <div class="row mx-3">
+        <div class="col-md-4 my-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{% trans 'Search a specialist' %}</h3>
+                    <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
+                            <datalist id="specialityOptions">
+                                {% for option_speciality in form.speciality|dictsort:'data.label' %}
+                                    {{ option_speciality }}
+                                {% endfor %}
+                            </datalist>
+                        </div>
+
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                            <select class="form-select"  id="input-speciality" >
+                            {% for option_speciality in form.speciality|dictsort:'data.label' %}
+                                    {{ option_speciality }}
+                                {% endfor %}
+                            </select>
+                            <span class="input-group-text">
+                                <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a>
+                            </span>
+                        </div>
+
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                            <select class="form-select"  id="input-city">
+                                {% for option_city in form.city|dictsort:'data.label' %}
+                                    <option value="{{ option_city }}"></option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 text-end">
+            <img src="{% static "website/img/happy_family.jpg" %}" class="img-fluid" alt="">
+
+        </div>
+
+    </div>
+
+
+    <div class="row justify-content-around">
+        <div class="col-md-2">
+            <section>
+                <h2>Section 1</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+        <div class="col-md-2">
+            <section>
+                <h2>Section 2</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+        <div class="col-md-2">
+            <section>
+                <h2>Section 3</h2>
+                <p>{% lorem 30 w%}</p>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

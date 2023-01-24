@@ -1,0 +1,40 @@
+{{ ranking }}
+{% if ranking < 1 %}
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+{% elif ranking < 2 %}
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+{% elif ranking < 3 %}
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+{% elif ranking < 4 %}
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star"></i>
+    <i class="bi bi-star"></i>
+{% elif ranking < 4.5 %}
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star"></i>
+{% else %}
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-half"></i>
+{% endif %}
+({{ number_comments }})
+
