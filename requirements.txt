@@ -16,3 +16,4 @@ gunicorn
 
 mypy==0.991
 django-stubs==1.13.1
+whitenoise==6.3.0
