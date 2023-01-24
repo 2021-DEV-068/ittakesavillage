@@ -151,7 +151,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'public'
 
 # Media
-MEDIA_ROOT = BASE_DIR / 'uploads/'
+MEDIA_ROOT = BASE_DIR / 'uploads/caregivers/'
 MEDIA_URL = 'media/'
 
 # Default primary key field type
