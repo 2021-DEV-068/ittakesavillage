@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django_bootstrap5',
     'website',
+    'whitenoise.runserver_nostatic',
 ]
 
 if DEBUG:
@@ -72,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 if DEBUG:
@@ -147,6 +149,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'public'
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Media
 MEDIA_ROOT = BASE_DIR / 'uploads/'
