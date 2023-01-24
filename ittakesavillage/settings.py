@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django_filters',
     'django_bootstrap5',
     'website',
-    'whitenoise.runserver_nostatic',
 ]
 
 if DEBUG:
@@ -73,7 +72,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 if DEBUG:
@@ -151,7 +149,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'public'
 
 # Media
-MEDIA_ROOT = BASE_DIR / 'uploads/caregivers/'
+MEDIA_ROOT = BASE_DIR / 'uploads/'
 MEDIA_URL = 'media/'
 
 # Default primary key field type
