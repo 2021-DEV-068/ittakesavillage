@@ -37,7 +37,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app/', 'https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app/', 'https://*.127.0.0.1', 'django-server-production-668b.up.railway.app/']
 
 if DEBUG:
     import socket  # only if you haven't already imported this
