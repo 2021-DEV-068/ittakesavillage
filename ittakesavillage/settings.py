@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 
 env = environ.Env(
-    DEBUG=(bool, os.environ.get('DEBUG', False)),
+    DEBUG=(bool, os.environ.get('DEBUG', True)),
     SECRET_KEY=(str, os.environ.get('SECRET_KEY', 'dsfqsdg4dfg7zdfg1qsd4gf')),
     DATABASE_URL=(str, os.getenv('DATABASE_URL'))
 
@@ -153,7 +153,7 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media
 MEDIA_ROOT = BASE_DIR / 'uploads/'
-MEDIA_URL = 'uploads/'
+MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
