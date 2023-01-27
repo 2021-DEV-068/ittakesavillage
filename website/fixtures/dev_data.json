@@ -166,7 +166,7 @@
       "email": "alicia.mukendi@email.com",
       "sex": "F",
       "address": 2,
-      "profile_photo": "website/static/website/img/alicia.webp",
+      "profile_photo": "../static/website/img/alicia.webp",
       "profile_video": "https://www.youtube.com/embed/G1Pp3yespPQ",
       "languages": "[\"FR\"]",
       "description": "Hello,\r\nI'm Alicia Mukendi.",
