@@ -10,4 +10,5 @@ class AppointmentForm(forms.Form):
         required=True
     )
     first_appointment = forms.BooleanField(label=_('First appointment'))
+    second_appointment = forms.BooleanField(label=_('Second appointment'))
     slot = forms.DateTimeField(required=True)
