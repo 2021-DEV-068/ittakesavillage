@@ -1,3 +1,7 @@
 div.required > label::after {
     content: ' *';
 }
+
+ul {
+    list-style-type: square;
+  }
