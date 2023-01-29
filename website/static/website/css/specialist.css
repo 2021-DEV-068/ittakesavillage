@@ -7,9 +7,8 @@ ul {
   }
 
   .center {
-    display: flex;
-    height: 150px;
-    align-items: center;
+    padding: 70px 0;
+    text-align: center;
   }
 
   .bigspace {
