@@ -24,7 +24,7 @@
                     <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
+                            <input onchange= 'categoryFilter(event)' class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
                             <datalist id="specialityOptions">
                                 {% for option_speciality in form.speciality|dictsort:'data.label' %}
                                     {{ option_speciality }}
@@ -102,12 +102,17 @@
 <br><br>
 <div class="col-md-5 my-auto">
     <div class="center">
-    <h3 class="text-brown">HOW BEARHUG CAN HELP YOU?</h3>
-    <h4>Help and Support!</h4></div>
+    <h3 class="text-brown">HOW BEARHUG CAN HELP YOU?</h3></div>
+    <h4>Help and Support!</h4>
     <p class="fw-lighter">Becoming a parent can be quite a transition. And at BearHug we believe that this transition into parenthood should be a serene and peaceful experience. At BearHug you can find support and get early childhood professionals to guide you from pregnancy all the way through post-partum. They will listen, help and support you.
 
         Pregnancy and parenthood can often be unchartered territories, which it doesn’t need to be. We want to enable you to make informed decisions about childbirth, your post-partum wellbeing, your relationship and parenthood. Knowledge is power and we strive to help you find yours!</p>
   
 </div>
+<script>
+    function categoryFilter(event){
+        console.log(event);
+    }
+</script>
 
 {% endblock content %}

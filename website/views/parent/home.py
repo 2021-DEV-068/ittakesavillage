@@ -10,3 +10,8 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['form'] = CaregiverFilter().form
         return context
+
+    def categoriesFilter(event):
+            #event['some_data_from_page']
+            print(event)
+            #return http.HttpRespones("Some response from server")
