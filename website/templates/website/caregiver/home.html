@@ -21,27 +21,36 @@
 
     <br><br>
     <div class="row justify-content-around">
-        <div class="col-md-2">
-            <section>
-                <h2>Section 1</h2>
-                <p>{% lorem 30 w%}</p>
-            </section>
+        <div class="col-md-3">
+            
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"> <h5 class="card-title">1 SIGN UP</h5> </div>
+                <div class="card-body">
+            
+                  <p class="card-text">Sign up to create your online account to keep track of your bookings.</p>
+                </div>
+              </div>
         </div>
-        <div class="col-md-2">
-            <section>
-                <h2>Section 2</h2>
-                <p>{% lorem 30 w%}</p>
-            </section>
+        <div class="col-md-3">
+                        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"> <h5 class="card-title">2 CHOOSE THE SUPPORT YOU NEED</h5> </div>
+                <div class="card-body">
+            
+                  <p class="card-text">Find the help you are seeking! Thanks to our category drop down menu, you can select the field in which you are seeking support. All the professions offering help in that category will show up. There is much more help available out there than parents often know. Help is on the way!</p>
+                </div>
+              </div>
         </div>
-        <div class="col-md-2">
-            <section>
-                <h2>Section 3</h2>
-                <p>{% lorem 30 w%}</p>
-            </section>
-        </div>
+        <div class="col-md-3">
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"> <h5 class="card-title">3 BOOK YOUR SESSION</h5> </div>
+                <div class="card-body">
+                 
+                  <p class="card-text">Once you have found your caregiver, you can easily book an appointment. You will get free reminders before your appointments, so you don’t have to think about it anymore!</p>
+                </div>
+              </div>
     </div>
 
-    <div>
+</div>
         <h3>YOUR ADVANTAGES</h3>
         <ul>
             <li>Optimize your online visibility</li>
@@ -52,5 +61,5 @@
             <li>Optimize your online visibility</li>
         </ul>
         <a class="btn btn-primary" href="{% url 'caregiver:signup' %}" role="button">{% trans 'Join us' %}</a>
-    </div>
+  
 {% endblock content %}
