@@ -6,11 +6,23 @@
         <h4 class="card-title"><i class="bi bi-currency-euro"></i> {{ caregiver.min_rate|floatformat }} - {{ caregiver.max_rate|floatformat }}</h4>
         <hr class="border border-dark opacity-75">
         <form action="{% url 'parent:appointment_create' caregiver.pk %}" method="post">
-            {% csrf_token %}
+           <!-- {% csrf_token %}
 
             {% bootstrap_field form.speciality layout='floating' %}
             {% bootstrap_field form.first_appointment %}
-            {% bootstrap_field form.second_appointment %}
+            {% bootstrap_field form.second_appointment %}-->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Default checkbox
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Checked checkbox
+                </label>
+              </div>
 
             <div class="row">
                 <div class="col-md-8 mx-auto">
