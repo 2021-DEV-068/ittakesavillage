@@ -14,3 +14,14 @@ ul {
   .bigspace {
     margin-top: 10px;
   }
+
+  h1,h3 {
+    color:rgb(91, 39, 39);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h6 {
+    color:rgb(39, 39, 100)
+}
+h5 {
+    color:rgb(91, 39, 39);
+}
