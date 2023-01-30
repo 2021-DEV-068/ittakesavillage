@@ -12,10 +12,10 @@
                 {% csrf_token %}
                 {% bootstrap_form_errors form %}
                 {% bootstrap_form form %}
-                <button type="submit" class="btn btn-primary">
+                <!-- <button type="submit" class="btn btn-primary">
                     {% trans "Choose your membership" %}
-                </button>
-                <!--<a class="btn btn-primary" href="{% url 'caregiver:membershipcard' %}" role="button">{% trans 'Choose your membership' %}</a>-->
+                </button> -->
+                <a class="btn btn-primary" href="{% url 'caregiver:membershipcard' %}" role="button">{% trans 'Choose your membership' %}</a>
             </form>
         </div>
     </div>

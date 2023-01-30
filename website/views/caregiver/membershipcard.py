@@ -1,22 +1,11 @@
 from django.views.generic import TemplateView
-# from django.shortcuts import render
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 
-class membershipCardView():
+class membershipCardView(SuccessMessageMixin):
     template_name = "website/caregiver/membershipcard.html"
-    # render('caregiver/membershipcard.html')
-    reverse("caregiver:membershipcard")
-    # template_name = "website/caregiver/signup.html"
-    # form_class = SignUpForm
-    # success_message = _("We will proceed your request.")
-
-    # def form_valid(self, form):
-    #     return super().form_valid(form)
-
-    # def get_success_url(self):
-    #     return reverse("caregiver:home")
-
-
-
-    
+    success_message = _("We will proceed your request.")
+    def get_success_url(self):
+        return reverse("caregiver:membershipcard")
