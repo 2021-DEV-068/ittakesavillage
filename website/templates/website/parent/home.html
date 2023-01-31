@@ -1,7 +1,7 @@
 {% extends 'website/parent/layout.html' %}
 
 {% load static i18n %}
-
+{% load django_bootstrap5 %}
 
 
 {% block content %}
@@ -44,7 +44,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">{% trans 'Search a specialist' %}</h3>
-                    <!-- <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end"> -->
+                    <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
                         <!-- <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text"><i class="bi bi-search"></i></span>
                             <input onchange= 'categoryFilter(event)' class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
@@ -120,7 +120,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
 
-                    <!-- </form> -->
+                     </form> 
                 </div>
             </div>
         </div>
