@@ -16,12 +16,12 @@ ul {
   }
 
   h1,h3 {
-    color:#FF6E40;
+    color:rgb(91, 39, 39);
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 h6 {
-    color:#FF3D00;
+    color:rgb(39, 39, 100)
 }
 h5 {
-    color:#DD2C00;
+    color:rgb(91, 39, 39);
 }
