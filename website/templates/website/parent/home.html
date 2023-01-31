@@ -44,7 +44,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">{% trans 'Search a specialist' %}</h3>
-                    <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
+                    <!-- <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end"> -->
                         <!-- <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text"><i class="bi bi-search"></i></span>
                             <input onchange= 'categoryFilter(event)' class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
@@ -120,7 +120,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
 
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>
@@ -224,7 +224,6 @@
            {id:"Parent and Child communication", value:["Speech therapist","Baby/Parent communication therapist","Logopaedist"]},
            {id:"Baby’s movement and carrying", value:["Baby massage sessions","Psychometrician"]}];
            function callMyMethod(event){
-         alert(event);
          arry2=[];
          console.log(event.target.innerText);
          arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
