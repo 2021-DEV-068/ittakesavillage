@@ -47,7 +47,7 @@
                     <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
                         <!-- <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input onchange= 'categoryFilter(event)' class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
+                            <input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
                             <datalist id="specialityOptions">
                                 {% for option_speciality in form.speciality|dictsort:'data.label' %}
                                     {{ option_speciality }}
@@ -67,9 +67,10 @@
                             </span>
                         </div> -->
                         <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
                             <input class="input-group-text" id="dropdownMenuButton"
-                              data-mdb-toggle="dropdown" aria-expanded="false">
-                              Specialist
+                              data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
+                              
                             </input>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <li><a class="dropdown-item" href="#">Childcare</a></li>
@@ -99,9 +100,10 @@
                             </ul>
                           </div>
                           <div class="input-group input-group-lg mb-3">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Specialist
-                            </button>
+                            <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                            <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                            </input>
                             <div class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="#">Action</a>
                               <a class="dropdown-item" href="#">Another action</a>
