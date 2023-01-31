@@ -131,39 +131,9 @@
 		});
 	</script>
 
-</body>
-</html>
 
 
 
-{% load static i18n %}
-<!DOCTYPE html>
-{% get_current_language as LANGUAGE_CODE %}
-<html lang="{{ LANGUAGE_CODE }}">
-
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    {% block stylesheet %}
-    <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap.css' %}" >
-    <link rel="stylesheet" href="{% static 'website/bootstrap/icons/bootstrap-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'website/choicesjs/css/choices.css' %}">
-    <link rel="stylesheet" href="{% static 'website/fullcalendar/main.css' %}">
-    <link rel="stylesheet" href="{% static 'website/css/specialist.css' %}">
-    {% endblock %}
-</head>
-
-<body>
-
-{% block navbar %}
-    {% include "website/caregiver/blocks/navbar.html" %}
-{% endblock %}
-
-<div class="row">
-    <div class="col-md-4 mx-auto">
-        {% include "website/caregiver/blocks/messages.html" %}
-    </div>
-</div>
 
 
 
