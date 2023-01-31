@@ -103,9 +103,10 @@
                                 Specialist
                             </button>
                             <div class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="javascript:;"onclick="callMyMethod(event)">Submenu item 4</a>
+                              <!-- <a class="dropdown-item" href="#">Action</a>
                               <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                              <a class="dropdown-item" href="#">Something else here</a> -->
                             </div>
                           </div>
 
@@ -256,12 +257,12 @@
            {id:"Submenu item 4", value:["dfdfd","falala"]},
            {id:"Submenu item 5", value:["menu 5 ","fadsdslala"]}];
            function callMyMethod(event){
-         arry2=[];
-         console.log(event.target.innerText);
-         arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
-         console.log(arry2);
-         let list = document.getElementById("dynamic_dropdown"); 
-         list.innerHTML = '';
+                arry2=[];
+                console.log(event.target.innerText);
+                arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
+                console.log(arry2);
+                let list = document.getElementById("dynamic_dropdown"); 
+                list.innerHTML = '';
                  for (var i = 0; i < arry2[0].value.length; i++){  
                      var li =document.createElement('li');              
                      var link = document.createElement("a");
@@ -270,7 +271,6 @@
                      link.className="dropdown-item";
                      li.appendChild(link);
                      list.appendChild(li);
-                     
                    }
                    var children = list.children;
          for (var i = 0; i < children.length; i++) {
