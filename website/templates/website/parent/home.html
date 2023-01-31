@@ -24,8 +24,8 @@
   }
   </style>
 
-<div class="row mx-3">
-    <div class="col-md-4 my-auto">
+<div class="row mx-1">
+    <div class="col-md-12 my-auto">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">{% trans 'FIND A CAREGIVER' %}</h3>
@@ -58,13 +58,13 @@
                         <input class="input-group-text" id="dropdownMenuButton"
                           data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
                           
-                        </input>
+                        
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <li><a class="dropdown-item" href="#">Childcare</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Parental care</a>
                           </li>
-                          <li>
+                          <ul>
                             <a class="dropdown-item" href="#">
                                 Baby and Parental Care &raquo;
                             </a>
@@ -83,12 +83,12 @@
                                 <a class="dropdown-item" href="javascript:;"onclick="callMyMethod(event)">Submenu item 4</a>
                               </li>
                             </ul>
-                          </li>
+                          </ul>
                         </ul>
                       </div>
                       </div>
-                      </div>
-                      <div class="col-md-3"></div>
+                      
+                      <div class="col-md-3">
                       <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
                         <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -115,8 +115,10 @@
                         </select>
                     </div>
                     </div>
+                    <div class="col-md-3 ">
                     <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
-
+                </div>
+                </div>
                  </form> 
             </div>
         </div>
@@ -128,6 +130,7 @@
 
 </div>
 
+<div class="container-fluid">
 
 <div class="row mt-3 mx-3">
     <div class="col-md-5 my-auto">
@@ -303,4 +306,5 @@
          }
           
          </script>
+         </div>
 {% endblock content %}
