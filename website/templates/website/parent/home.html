@@ -69,7 +69,7 @@
                         <div class="input-group input-group-lg mb-3">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
                               data-mdb-toggle="dropdown" aria-expanded="false">
-                              Dropdown button
+                              Speciality
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -103,7 +103,7 @@
                           </div>
                           <div class="input-group input-group-lg mb-3">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
+                                Speciality
                             </button>
                             <div class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="#">Action</a>
@@ -245,6 +245,12 @@
                      list.appendChild(li);
                      
                    }
+                   var children = list.children;
+         for (var i = 0; i < children.length; i++) {
+           var tableChild = children[i];
+           console.log(tableChild);
+         }
+         
            }
          
           
