@@ -21,6 +21,10 @@ h6 {
 h5 {
     color:rgb(14, 86, 153);
 }
+h2 {
+    color:rgb(41, 27, 115);
+    font-family: ‘Oswald’, sans-serif;
+}
 .logo {
     height: 8%;
     width: 8%;
