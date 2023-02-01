@@ -43,7 +43,6 @@
     "fields": {
       "specialist": 1,
       "week_day": "Monday",
-      "start": "10:00:00",
       "end": "11:00:00"
     }
   },
@@ -122,7 +121,7 @@
     "pk": 11,
     "fields": {
       "specialist": 3,
-      "week_day": "Tuesday",
+      "week_day": "Saturday",
       "start": "08:00:00",
       "end": "10:00:00"
     }
@@ -132,7 +131,7 @@
     "pk": 12,
     "fields": {
       "specialist": 3,
-      "week_day": "Tuesday",
+      "week_day": "Saturday",
       "start": "14:00:00",
       "end": "16:00:00"
     }
