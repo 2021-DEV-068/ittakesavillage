@@ -42,7 +42,7 @@
     "pk": 4,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "11:00:00",
       "end": "11:30:00"
     }
@@ -52,7 +52,7 @@
     "pk": 5,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "13:00:00",
       "end": "13:30:00"
     }
@@ -62,7 +62,7 @@
     "pk": 6,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "13:30:00",
       "end": "14:00:00"
     }
@@ -72,7 +72,7 @@
     "pk": 7,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "14:00:00",
       "end": "15:00:00"
     }
@@ -82,7 +82,7 @@
     "pk": 8,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "15:00:00",
       "end": "16:00:00"
     }
@@ -92,7 +92,7 @@
     "pk": 9,
     "fields": {
       "specialist": 1,
-      "week_day": "Monday",
+      "week_day": "Wednesday",
       "start": "16:00:00",
       "end": "17:00:00"
     }
