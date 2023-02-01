@@ -39,15 +39,6 @@
   },
   {
     "model": "website.caregiverconsultationslot",
-    "pk": 3,
-    "fields": {
-      "specialist": 1,
-      "week_day": "Monday",
-      "end": "11:00:00"
-    }
-  },
-  {
-    "model": "website.caregiverconsultationslot",
     "pk": 4,
     "fields": {
       "specialist": 1,
