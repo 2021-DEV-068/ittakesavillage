@@ -85,28 +85,11 @@
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <input class="input-group-text" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
+                <input class="input-group-text" id="dropdownMenuButton2" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
                 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                   <li>
                     <a class="dropdown-item" href="#">Action</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Another action</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"> Submenu &raquo; </a>
-                    <ul class="dropdown-menu dropdown-submenu">
-                      <!-- <li>
-                        <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 1</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 2</a>
-                      </li> -->
-                      <li>
-                        <a class="dropdown-item" href="#">Ajay &raquo; </a>
-                      </li>
-                    </ul>
                   </li>
                 </ul>
               </div>
@@ -246,10 +229,10 @@
         return a.id == event.target.innerText
       });
       console.log(arry2);
-      let list = document.getElementById("dynamic_dropdown");
+      let list = document.getElementById("dropdownMenuButton2");
       let ul = document.createElement('ul');
       ul.className = 'dropdown-menu';
-      ul.setAttribute('aria-labelledby', 'dropdownMenuButton');
+      ul.setAttribute('aria-labelledby', 'dropdownMenuButton2');
       list.innerHTML = '';
       for (var i = 0; i < arry2[0].value.length; i++) {
         var li = document.createElement('li');
@@ -269,7 +252,7 @@
     }
 
     function reload() {
-      var container = document.getElementById("dynamic_dropdown");
+      var container = document.getElementById("dropdownMenuButton2");
       var content = container.innerHTML;
       container.innerHTML = content;
       //this line is to watch the result in console , you can remove it later	
