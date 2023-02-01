@@ -6,7 +6,7 @@ from django.db import models
 from django.db.models import Prefetch
 
 from website.models.caregiver_consultation_slot import CaregiverConsultationSlot
-from website.models.choices import Sex, Language
+from website.models.choices import Gender, Language
 
 
 class CaregiverManager(models.Manager):
@@ -25,7 +25,7 @@ class Caregiver(models.Model):
     last_name = models.CharField(max_length=240)
     email = models.EmailField(max_length=240)
 
-    sex = models.CharField(max_length=1, choices=Sex.choices)
+    sex = models.CharField(max_length=1, choices=Gender.choices)
     address = models.OneToOneField(
         'website.CaregiverAddress',
         on_delete=models.PROTECT
