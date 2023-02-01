@@ -174,7 +174,7 @@
       "first_name": "Fred",
       "last_name": "Ricard",
       "email": "fred.ricard@email.com",
-      "gender": "M",
+      "sex": "M",
       "address": 3,
       "profile_photo": "caregivers/profile/fred.webp",
       "profile_video": "https://www.youtube.com/embed/G1Pp3yespPQ",
