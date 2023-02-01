@@ -15,13 +15,28 @@ ul {
     margin-top: 10px;
   }
 
-  h1,h3 {
-    color:rgb(91, 39, 39);
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+h1,h3 {
+  color:rgb(41, 27, 115);
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 h6 {
-    color:rgb(39, 39, 100)
+  color:rgb(74, 74, 210)
 }
 h5 {
-    color:rgb(91, 39, 39);
+  color:rgb(14, 86, 153);
+}
+h2 {
+  color:rgb(41, 27, 115);
+  font-family: ‘Oswald’, sans-serif;
+}
+.logo {
+  height: 8%;
+  width: 8%;
+}
+.d-flex{
+  margin-top: 5px;
+}
+#find{
+  margin-top: 5px;
 }
