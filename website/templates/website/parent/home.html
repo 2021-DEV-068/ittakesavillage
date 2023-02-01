@@ -6,289 +6,269 @@
 
 {% block content %}
 <style>
-    .dropdown-menu li {
-  position: relative;
+  .dropdown-menu li {
+    position: relative;
   }
+
   .dropdown-menu .dropdown-submenu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: -7px;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
   }
+
   .dropdown-menu .dropdown-submenu-left {
-  right: 100%;
-  left: auto;
+    right: 100%;
+    left: auto;
   }
-  .dropdown-menu > li:hover > .dropdown-submenu {
-  display: block;
+
+  .dropdown-menu>li:hover>.dropdown-submenu {
+    display: block;
   }
-  </style>
+</style>
 <br>
 <div class="row mx-1">
-    <div class="col-md-12 my-auto">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">{% trans 'FIND A CAREGIVER' %}</h3>
-                <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
-                    <div class="row" >
-                        <div class="col-md-3">
-                    <!-- <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ...">
-                        <datalist id="specialityOptions">
+  <div class="col-md-12 my-auto">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">{% trans 'FIND A CAREGIVER' %}</h3>
+        <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
+          <div class="row">
+            <div class="col-md-3">
+              <!-- <div class="input-group input-group-lg mb-3"><span class="input-group-text"><i class="bi bi-search"></i></span><input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ..."><datalist id="specialityOptions">
                             {% for option_speciality in form.speciality|dictsort:'data.label' %}
                                 {{ option_speciality }}
                             {% endfor %}
-                        </datalist>
-                    </div>
-
-                    <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-                        <select class="form-select"  id="input-speciality" >
+                        </datalist></div><div class="input-group input-group-lg mb-3"><span class="input-group-text"><i class="bi bi-person-circle"></i></span><select class="form-select"  id="input-speciality" >
                         {% for option_speciality in form.speciality|dictsort:'data.label' %}
                                 {{ option_speciality }}
                             {% endfor %}
-                        </select>
-                        <span class="input-group-text">
-                            <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a>
-                        </span>
-                    </div> -->
-                    <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input class="input-group-text" id="dropdownMenuButton"
-                          data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
-                          
-                        
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li>
-                              <a class="dropdown-item" href="#">Another action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                Submenu &raquo;
-                              </a>
-                              <ul class="dropdown-menu dropdown-submenu">
-                                <li>
-                                  <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 1</a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 2</a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                                  <ul class="dropdown-menu dropdown-submenu">
-                                    <li>
-                                      <a class="dropdown-item" href="#">Multi level 1</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">Multi level 2</a>
-                                    </li>
-                                  </ul>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">Submenu item 4</a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">Submenu item 5</a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                      </div>
-                      </div>
-                      
-                      <div class="col-md-3">
-                      <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-                        <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            
-                        <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                        </select><span class="input-group-text"><a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a></span></div> -->
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input class="input-group-text" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item" href="#">Action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> Submenu &raquo; </a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 1</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:;" onclick="callMyMethod(event)">Submenu item 2</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="#">Multi level 1</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Multi level 2</a>
+                          </li>
                         </ul>
-                        <span class="input-group-text">
-                            <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a>
-                        </span>
-                        </div>
-                      </div>
-                     
-                      <div class="col-md-3">
-                    <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
-                        <select class="form-select"  id="input-city">
-                            {% for option_city in form.city|dictsort:'data.label' %}
-                                <option value="{{ option_city }}"></option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="input-group input-group-lg mb-3">
-                            <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
-                          </div>
-                 </div>
-                </div>
-                 </form> 
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Submenu item 4</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Submenu item 5</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!--<div class="col-md-8 text-end">
-        <img src="{% static "website/img/happy_family.jpg" %}" class="img-fluid" alt="">
-    </div>-->
-
-</div>
-
-<div class="container-fluid">
-
-<div class="row mt-3 mx-3">
-    <div class="col-md-5 my-auto">
-        <h1 class="text-brown">ARE YOU PREGNANT? ARE YOU A PARENT?</h1>
-        <h6>FIND HELP AND SUPPORT</h6>
-        <p class="fw-lighter">Are you about to have a baby? Or maybe your baby is already born? Do you have a million questions? Do you often feel overwhelmed? Pregnancy, birth and post-partum are life changing moments in the life of a couple and at BearHug we believe that the transition into parenthood should be an easy and peaceful one.
-            At BearHug you can find help and support to accompany you and your partner through the journey of parenthood.
-            Because after all, it takes a village to raise a child!</p>
-    </div>
-
-    <div class="col-md-7 text-end">
-        <img src="/static/website/img/happy_family.jpg" class="img-fluid" alt="">
-
-    </div>
-
-    
-
-    <br><br>
-    <div class="row justify-content-around">
-        <div class="col-md-3">
-            
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"> <h5 class="card-title">1 SIGN UP</h5> </div>
-                <div class="card-body">
-            
-                  <p class="card-text">Sign up to create your online account to keep track of your bookings.</p>
-                </div>
+            <div class="col-md-3">
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+                <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </ul>
+                <span class="input-group-text">
+                  <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank">
+                    <i class="bi bi-question-circle-fill"></i>
+                  </a>
+                </span>
               </div>
-        </div>
-        <div class="col-md-3">
-                        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"> <h5 class="card-title">2 CHOOSE THE SUPPORT YOU NEED</h5> </div>
-                <div class="card-body">
-            
-                  <p class="card-text">Find the help you are seeking! Thanks to our category drop down menu, you can select the field in which you are seeking support. All the professions offering help in that category will show up. There is much more help available out there than parents often know. Help is on the way!</p>
-                </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </span>
+                <select class="form-select" id="input-city"> {% for option_city in form.city|dictsort:'data.label' %} <option value="{{ option_city }}"></option> {% endfor %} </select>
               </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"> <h5 class="card-title">3 BOOK YOUR SESSION</h5> </div>
-                <div class="card-body">
-                 
-                  <p class="card-text">Once you have found your caregiver, you can easily book an appointment. You will get free reminders before your appointments, so you don’t have to think about it anymore!</p>
-                </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group input-group-lg mb-3">
+                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
               </div>
-    </div>
-</div>
-
-<br><br>
-<div class="row mt-3 mx-3">
-        <h3>HOW BEARHUG CAN HELP YOU?</h3> 
-        <h4>Help and Support!</h4>
-        <p class="fw-lighter">Becoming a parent can be quite a transition. And at BearHug we believe that this transition into  parenthood should be a serene and peaceful experience. At BearHug you can find support and get early childhood professionals to guide you from pregnancy all the way through post-partum. They will listen, help and support you.
-        Pregnancy and parenthood can often be unchartered territories, which it doesn’t need to be. We want to enable you to make informed decisions about childbirth, your post-partum wellbeing, your relationship and parenthood. Knowledge is power and we strive to help you find yours!</p>
-</div>
-
-<div class="row mt-3 mx-3">
-        <h4>Passionate and Qualified Professionals</h4>
-        <p class="fw-lighter">All our professionals are people who do what they love. Supporting parents transitioning into parenthood is their calling. They are passionate, competent and carrying.
-
-            The profiles of all the caregivers have been thoroughly verified by us personally. Recommendations by other parents, help you and other to make informed decisions.</p>
-</div>
-
-<div class="row mt-3 mx-3">
-        <h4>Baby Care and Parental Care</h4>
-        <p class="fw-lighter">Whether you are looking for support for your baby or for you or for you and your partner, you can find it!
-
-            Being a parent is also about taking care of yourself and your relationship. The better you feel and the happier you are, the more you have to offer. We care about the whole family’s wellbeing!</p>
-</div>
-
-<div class="row mt-3 mx-3">
-        <h4>Book face-to-face or online sessions</h4>
-        <p class="fw-lighter">Post-partum can also be a time for cocooning and privacy, which we understand and respect. Therefore, you can choose whether you want a physical or an online consultation with your profession caregiver.</p>
-</div>
-
-<div class="row mt-3 mx-3">
-        <h4>People who care about you!</h4>
-        <p class="fw-lighter">At BearHug we believe in community and supporting each other!
-            You are not alone! Help is on the way! Because, after all, raising a child takes a village!</p>
-</div>
-
-<br><br>
-<div class="row mt-3 mx-3">
-        <h3 class="text-center">WHAT YOU WILL FIND</h3>
-        <ul>
-            <li>Early childhood healthcare professionals</li>
-            <li>Support for the whole family</li>
-            <li>All the needed information to make an informed decision (availability, price, location, experience, etc.)</li>
-            <li>Diplomas and skill certification. Each profile has been verified by us personally</li>
-            <li>See other parents recommendations</li>
-            <li>Geolocated results</li>
-            <li>Face-to-face or online sessions</li>
-            <li>Easy online bookings</li>
-            <li>Get appointment reminders</li>
-            <li>Easily cancel your appointment</li>
-            <li>Find pre- and post-natal workshops (coming soon)</li>
-            <li>A space to meet and connect with other parents (coming soon)</li>
-            <li>A phone number you can call 24/7 to ask your urgent questions (coming soon)</li>
-        </ul>
-    </div>
-        <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
+            </div>
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
+  <!--<div class="col-md-8 text-end"><img src="{% static "website/img/happy_family.jpg" %}" class="img-fluid" alt=""></div>-->
+</div>
+<div class="container-fluid">
+  <div class="row mt-3 mx-3">
+    <div class="col-md-5 my-auto">
+      <h1 class="text-brown">ARE YOU PREGNANT? ARE YOU A PARENT?</h1>
+      <h6>FIND HELP AND SUPPORT</h6>
+      <p class="fw-lighter">Are you about to have a baby? Or maybe your baby is already born? Do you have a million questions? Do you often feel overwhelmed? Pregnancy, birth and post-partum are life changing moments in the life of a couple and at BearHug we believe that the transition into parenthood should be an easy and peaceful one. At BearHug you can find help and support to accompany you and your partner through the journey of parenthood. Because after all, it takes a village to raise a child!</p>
+    </div>
+    <div class="col-md-7 text-end">
+      <img src="/static/website/img/happy_family.jpg" class="img-fluid" alt="">
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-around">
+      <div class="col-md-3">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <h5 class="card-title">1 SIGN UP</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Sign up to create your online account to keep track of your bookings.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <h5 class="card-title">2 CHOOSE THE SUPPORT YOU NEED</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Find the help you are seeking! Thanks to our category drop down menu, you can select the field in which you are seeking support. All the professions offering help in that category will show up. There is much more help available out there than parents often know. Help is on the way!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <h5 class="card-title">3 BOOK YOUR SESSION</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Once you have found your caregiver, you can easily book an appointment. You will get free reminders before your appointments, so you don’t have to think about it anymore!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row mt-3 mx-3">
+      <h3>HOW BEARHUG CAN HELP YOU?</h3>
+      <h4>Help and Support!</h4>
+      <p class="fw-lighter">Becoming a parent can be quite a transition. And at BearHug we believe that this transition into parenthood should be a serene and peaceful experience. At BearHug you can find support and get early childhood professionals to guide you from pregnancy all the way through post-partum. They will listen, help and support you. Pregnancy and parenthood can often be unchartered territories, which it doesn’t need to be. We want to enable you to make informed decisions about childbirth, your post-partum wellbeing, your relationship and parenthood. Knowledge is power and we strive to help you find yours!</p>
+    </div>
+    <div class="row mt-3 mx-3">
+      <h4>Passionate and Qualified Professionals</h4>
+      <p class="fw-lighter">All our professionals are people who do what they love. Supporting parents transitioning into parenthood is their calling. They are passionate, competent and carrying. The profiles of all the caregivers have been thoroughly verified by us personally. Recommendations by other parents, help you and other to make informed decisions.</p>
+    </div>
+    <div class="row mt-3 mx-3">
+      <h4>Baby Care and Parental Care</h4>
+      <p class="fw-lighter">Whether you are looking for support for your baby or for you or for you and your partner, you can find it! Being a parent is also about taking care of yourself and your relationship. The better you feel and the happier you are, the more you have to offer. We care about the whole family’s wellbeing!</p>
+    </div>
+    <div class="row mt-3 mx-3">
+      <h4>Book face-to-face or online sessions</h4>
+      <p class="fw-lighter">Post-partum can also be a time for cocooning and privacy, which we understand and respect. Therefore, you can choose whether you want a physical or an online consultation with your profession caregiver.</p>
+    </div>
+    <div class="row mt-3 mx-3">
+      <h4>People who care about you!</h4>
+      <p class="fw-lighter">At BearHug we believe in community and supporting each other! You are not alone! Help is on the way! Because, after all, raising a child takes a village!</p>
+    </div>
+    <br>
+    <br>
+    <div class="row mt-3 mx-3">
+      <h3 class="text-center">WHAT YOU WILL FIND</h3>
+      <ul>
+        <li>Early childhood healthcare professionals</li>
+        <li>Support for the whole family</li>
+        <li>All the needed information to make an informed decision (availability, price, location, experience, etc.)</li>
+        <li>Diplomas and skill certification. Each profile has been verified by us personally</li>
+        <li>See other parents recommendations</li>
+        <li>Geolocated results</li>
+        <li>Face-to-face or online sessions</li>
+        <li>Easy online bookings</li>
+        <li>Get appointment reminders</li>
+        <li>Easily cancel your appointment</li>
+        <li>Find pre- and post-natal workshops (coming soon)</li>
+        <li>A space to meet and connect with other parents (coming soon)</li>
+        <li>A phone number you can call 24/7 to ask your urgent questions (coming soon)</li>
+      </ul>
+    </div>
+    <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
+  </div>
+  <script>
+    let arry2 = [];
+    let arraya = [{
+      id: "Submenu item 1",
+      value: ["abcd", "bcd"]
+    }, {
+      id: "Submenu item 2",
+      value: ["alala", "falala"]
+    }, {
+      id: "Submenu item 3",
+      value: ["sasad", "falala"]
+    }, {
+      id: "Submenu item 4",
+      value: ["dfdfd", "falala"]
+    }, {
+      id: "Submenu item 5",
+      value: ["menu 5 ", "fadsdslala"]
+    }];
 
-         <script>
-           let arry2=[];
-           let arraya =[{id:"Submenu item 1", value:["abcd","bcd"]},{id:"Submenu item 2", value:["alala","falala"]},
-           {id:"Submenu item 3", value:["sasad","falala"]},
-           {id:"Submenu item 4", value:["dfdfd","falala"]},
-           {id:"Submenu item 5", value:["menu 5 ","fadsdslala"]}];
-           function callMyMethod(event){
-                arry2=[];
-                console.log(event.target.innerText);
-                arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
-                console.log(arry2);
-                let list = document.getElementById("dynamic_dropdown"); 
-                let ul = document.createElement('ul');
-                ul.className='dropdown-menu';
-                ul.setAttribute('aria-labelledby','dropdownMenuButton');
-                list.innerHTML = '';
-                 for (var i = 0; i < arry2[0].value.length; i++){  
-                     var li =document.createElement('li');              
-                     var link = document.createElement("a");
-                     link.innerText= arry2[0].value[i];            
-                     link.href = "javascript:;";
-                     link.className="dropdown-item";
-                     li.appendChild(link);
-                     list.appendChild(li);
-                   }
-                   var children = list.children;
-         for (var i = 0; i < children.length; i++) {
-           var tableChild = children[i];
-           console.log(tableChild);
-           reload()
-         }
-}
+    function callMyMethod(event) {
+      arry2 = [];
+      console.log(event.target.innerText);
+      arry2 = arraya.filter(a => {
+        return a.id == event.target.innerText
+      });
+      console.log(arry2);
+      let list = document.getElementById("dynamic_dropdown");
+      let ul = document.createElement('ul');
+      ul.className = 'dropdown-menu';
+      ul.setAttribute('aria-labelledby', 'dropdownMenuButton');
+      list.innerHTML = '';
+      for (var i = 0; i < arry2[0].value.length; i++) {
+        var li = document.createElement('li');
+        var link = document.createElement("a");
+        link.innerText = arry2[0].value[i];
+        link.href = "javascript:;";
+        link.className = "dropdown-item";
+        li.appendChild(link);
+        list.appendChild(li);
+      }
+      var children = list.children;
+      for (var i = 0; i < children.length; i++) {
+        var tableChild = children[i];
+        console.log(tableChild);
+        reload()
+      }
+    }
 
-           function reload(){
-    var container = document.getElementById("dynamic_dropdown");
-    var content = container.innerHTML;
-    container.innerHTML= content; 
-    
-   //this line is to watch the result in console , you can remove it later	
-    console.log("Refreshed"); 
-}
-          
-          
-</script>
+    function reload() {
+      var container = document.getElementById("dynamic_dropdown");
+      var content = container.innerHTML;
+      container.innerHTML = content;
+      //this line is to watch the result in console , you can remove it later	
+      console.log("Refreshed");
+    }
+  </script>
          
 {% endblock content %}
