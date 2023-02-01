@@ -101,14 +101,12 @@
                       <div class="col-md-3">
                       <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-                        <input class="input-group-text" id="subcategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             
-                        <!-- </input> -->
-                        <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="subcategory">
-                          <!-- <a class="dropdown-item" href="#">Action</a>
+                        <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a> -->
-            
+                          <a class="dropdown-item" href="#">Something else here</a>
                         </ul>
                         <span class="input-group-text">
                             <a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a>
@@ -246,36 +244,7 @@
         </ul>
     </div>
         <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
-        <!-- <script>
-            let arry2=[];
-           let arraya =[{id:"Newborn Sleep & Respiration", value:["Baby sleep specialist","Newborn rhythms","Respiratory physiotherapy"]},{id:"Breastfeeding and Nutrition", value:["Lactation consultant","Weaning","Breastfeeding and feeding of newborns"]},
-           {id:"Parent and Child communication", value:["Speech therapist","Baby/Parent communication therapist","Logopaedist"]},
-           {id:"Baby’s movement and carrying", value:["Baby massage sessions","Psychometrician"]}];
-           function callMyMethod(event){
-         arry2=[];
-         console.log(event.target.innerText);
-         arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
-         console.log(arry2);
-         let list = document.getElementById("dynamic_dropdown"); 
-         list.innerHTML = '';
-                 for (var i = 0; i < arry2[0].value.length; i++){  
-                     var li =document.createElement('li');              
-                     var link = document.createElement("a");
-                     link.innerText= arry2[0].value[i];            
-                     link.href = "javascript:;";
-                     link.className="dropdown-item";
-                     li.appendChild(link);
-                     list.appendChild(li);
-                     
-                   }
-                   var children = list.children;
-         for (var i = 0; i < children.length; i++) {
-           var tableChild = children[i];
-           console.log(tableChild);
-         }
-         
-           }    
-         </script> -->
+      </div>
 
          <script>
             let arry2=[];
@@ -289,6 +258,9 @@
                 arry2=arraya.filter(a=>{ return a.id==event.target.innerText});
                 console.log(arry2);
                 let list = document.getElementById("dynamic_dropdown"); 
+                let ul = document.createElement('ul');
+                ul.className='dropdown-menu';
+                ul.setAttribute('aria-labelledby','dropdownMenuButton');
                 list.innerHTML = '';
                  for (var i = 0; i < arry2[0].value.length; i++){  
                      var li =document.createElement('li');              
@@ -303,16 +275,20 @@
          for (var i = 0; i < children.length; i++) {
            var tableChild = children[i];
            console.log(tableChild);
+           reload()
          }
-         console.log(document.getElementById("dynamic_dropdown"));
-           document.getElementById("dynamic_dropdown").innerHTML = list.innerHTML;
-           console.log(document.getElementById("dynamic_dropdown"));
-           console.log(list.innerHTML);
-           console.log(list.innerText);
+}
+
+           function reload(){
+    var container = document.getElementById("dynamic_dropdown");
+    var content = container.innerHTML;
+    container.innerHTML= content; 
+    
+   //this line is to watch the result in console , you can remove it later	
+    console.log("Refreshed"); 
+}
+          
+          
+</script>
          
-           }
-          
-          
-         </script>
-         </div>
 {% endblock content %}
