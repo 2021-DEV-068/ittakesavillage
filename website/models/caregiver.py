@@ -25,7 +25,7 @@ class Caregiver(models.Model):
     last_name = models.CharField(max_length=240)
     email = models.EmailField(max_length=240)
 
-    sex = models.CharField(max_length=1, choices=sex.choices)
+    sex = models.CharField(max_length=1, choices=Sex.choices)
     address = models.OneToOneField(
         'website.CaregiverAddress',
         on_delete=models.PROTECT
