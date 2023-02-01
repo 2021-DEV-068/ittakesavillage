@@ -21,3 +21,13 @@ h6 {
 h5 {
     color:rgb(14, 86, 153);
 }
+.logo {
+    height: 5%;
+    width: 5%;
+}
+.d-flex{
+    margin-top: 5px;
+}
+#find{
+    margin-top: 5px;
+}
