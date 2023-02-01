@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=240)),
                 ('last_name', models.CharField(max_length=240)),
                 ('email', models.EmailField(max_length=240)),
-                ('gender', models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')], max_length=1)),
+                ('sex', models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')], max_length=1)),
                 ('profile_photo', models.ImageField(upload_to='caregivers/profile/')),
                 ('profile_video', models.URLField()),
                 ('languages', django.contrib.postgres.fields.ArrayField(base_field=models.CharField(choices=[('FR', 'French'), ('EN', 'English'), ('NL', 'Dutch'), ('PT', 'Portuguese')], max_length=2), size=3)),
