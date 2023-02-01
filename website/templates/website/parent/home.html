@@ -35,23 +35,11 @@
         <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
           <div class="row">
             <div class="col-md-3">
-              <!-- <div class="input-group input-group-lg mb-3"><span class="input-group-text"><i class="bi bi-search"></i></span><input class="form-control" list="specialityOptions" id="exampleDataList" placeholder="lactation, massage, natal ..."><datalist id="specialityOptions">
-                            {% for option_speciality in form.speciality|dictsort:'data.label' %}
-                                {{ option_speciality }}
-                            {% endfor %}
-                        </datalist></div><div class="input-group input-group-lg mb-3"><span class="input-group-text"><i class="bi bi-person-circle"></i></span><select class="form-select"  id="input-speciality" >
-                        {% for option_speciality in form.speciality|dictsort:'data.label' %}
-                                {{ option_speciality }}
-                            {% endfor %}
-                        </select><span class="input-group-text"><a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a></span></div> -->
-              <div class="dropdown">
+              <div class="input-group input-group-lg mb-3">
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-          data-mdb-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
+                <input class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="lactation, massage, natal ...">
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
                     <a class="dropdown-item" href="#">Action</a>
@@ -90,13 +78,12 @@
                 </ul>
               </div>
             </div>
-              <div class="dropdown">
-                  
+            <div class="col-md-3">
+              <div class="input-group input-group-lg mb-3">
                 <!-- <span class="input-group-text">
                   <i class="bi bi-person-circle"></i>
                 </span> -->
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"">Dropdown button
                 </button>
                 <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -120,7 +107,7 @@
             </div>
             <div class="col-md-3">
               <div class="input-group input-group-lg mb-3">
-                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn ">{% trans "Search" %}</button>
               </div>
             </div>
           </div>
