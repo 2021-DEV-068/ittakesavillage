@@ -37,7 +37,7 @@ class CaregiverFilter(FilterSet):
         fields = [
             'physical',
             'online',
-            'sex'
+            'gender'
         ]
         filter_overrides = {
             models.CharField: {
