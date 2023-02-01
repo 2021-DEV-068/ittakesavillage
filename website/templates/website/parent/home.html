@@ -44,12 +44,14 @@
                                 {{ option_speciality }}
                             {% endfor %}
                         </select><span class="input-group-text"><a class="link-dark" href="{% url 'parent:info_speciality' %}" target="_blank"><i class="bi bi-question-circle-fill"></i></a></span></div> -->
-              <div class="input-group input-group-lg mb-3">
+              <div class="dropdown">
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">First Button
-                  </button>
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-mdb-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
                     <a class="dropdown-item" href="#">Action</a>
@@ -88,12 +90,13 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="input-group input-group-lg mb-3">
+              <div class="dropdown">
+                  
                 <!-- <span class="input-group-text">
                   <i class="bi bi-person-circle"></i>
                 </span> -->
-                <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
                 </button>
                 <ul class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
                   <li><a class="dropdown-item" href="#">Action</a></li>
