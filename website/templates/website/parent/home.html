@@ -101,7 +101,7 @@
                       <div class="col-md-3">
                       <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-                        <input class="input-group-text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input class="input-group-text" id="subcategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             
                         </input>
                         <div class="dropdown-menu" id="dynamic_dropdown" aria-labelledby="dropdownMenuButton">
@@ -303,19 +303,17 @@
          for (var i = 0; i < children.length; i++) {
            var tableChild = children[i];
            console.log(tableChild);
-           reload()
+           console.log(document.getElementById("dynamic_dropdown"));
+           document.getElementById("dynamic_dropdown").innerHTML = list.innerHTML;
+           console.log(document.getElementById("dynamic_dropdown"));
+           console.log(list.innerHTML);
+           console.log(list.innerText);
+
          }
          
          
            }
-           function reload(){
-             var container = document.getElementById("dynamic_dropdown");
-             var content = container.innerHTML;
-             container.innerHTML= content; 
-             
-            //this line is to watch the result in console , you can remove it later	
-             console.log("Refreshed"); 
-         }
+          
           
          </script>
          </div>
