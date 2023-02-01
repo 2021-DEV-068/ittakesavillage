@@ -4,8 +4,26 @@
 
 
 {% block content %}
-    <div class="row mt-3 mx-3">
-        <div class="col-md-5 my-auto">
+<style>
+    .dropdown-menu li {
+  position: relative;
+  }
+  .dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  }
+  .dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+  }
+  .dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+  }
+  </style>
+    <div class="row mx-1">
+        <div class="col-md-12 my-auto">
             <h1>ARE YOU AN EARLY CHILDHOOD PROFESSIONAL?</h1>
             <h6>BE SEEN BY AN EVER-GROWING COMMUNITY OF PARENTS</h6>
             <p class="fw-lighter">Do you spend a lot of time on the phone handling bookings? And do you spend time and money on your marketing and customer acquisition?
