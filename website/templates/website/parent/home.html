@@ -45,23 +45,25 @@
               
               <select id="ddl2">
               </select> -->
-              <optgroup class="input-group input-group-lg mb-3">
+              <div class="input-group input-group-lg mb-3">
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <optgroup class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
-                  <option value=""></option>
-                  <optgroup label="Swedish Cars"></optgroup>
-                  <option value="Colours">Colours</option>
-                  <option value="Shapes">Shapes</option>
-                  <option value="Names">Names</option>
+                <select class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
+                
+                  <optgroup label="Swedish Cars">
+                    <option value="Colours">Colours</option>
+                    <option value="Shapes">Shapes</option>
+                    <option value="Names">Names</option>
                   </optgroup>
-                  <optgroup label="Swedish Cars"></optgroup>
-                  <option value="Colours">Colours</option>
-                  <option value="Shapes">Shapes</option>
-                  <option value="Names">Names</option>
+                  <optgroup label="Swedish Cars">
+                    <option value="Colours">Colours</option>
+                    <option value="Shapes">Shapes</option>
+                    <option value="Names">Names</option>
                   </optgroup>
-                  </select>
+                </select>
+                  </div>
+                
                 <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
                     <a class="dropdown-item" href="#">Action</a>
@@ -126,7 +128,7 @@
             </div>
             <div class="col-md-3">
               <div class="input-group input-group-lg mb-3">
-                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn ">{% trans "Search" %}</button>
+                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
               </div>
             </div>
           </div>
