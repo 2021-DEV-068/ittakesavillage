@@ -11,9 +11,10 @@ div.home {
     font-size: 0.8em;
     padding: 1px;
 }
-h1,h3 {
+h1,h3,h4 {
     color:rgb(41, 27, 115);
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 h6 {
     color:rgb(74, 74, 210)
@@ -21,13 +22,9 @@ h6 {
 h5 {
     color:rgb(14, 86, 153);
 }
-h2 {
-    color:rgb(41, 27, 115);
-    font-family: "Brush Script MT", "Lucida Handwriting", cursive;
-}
 .logo {
-    height: 8%;
-    width: 8%;
+    height: 9%;
+    width: 9%;
 }
 .d-flex{
     margin-top: 5px;
