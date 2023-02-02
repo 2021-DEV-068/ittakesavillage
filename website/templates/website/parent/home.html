@@ -35,34 +35,27 @@
         <form action="{% url 'parent:caregiver_list' %}" method="get" class="text-end">
           <div class="row">
             <div class="col-md-3">
-
-              <!-- <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
-                <option value=""></option>
-                <option value="Colours">Colours</option>
-                <option value="Shapes">Shapes</option>
-                <option value="Names">Names</option>
-              </select>
-              
-              <select id="ddl2">
-              </select> -->
               <div class="input-group input-group-lg mb-3">
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
                 <select class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
                 
-                  <optgroup label="Swedish Cars">
-                    <option value="Colours">Colours</option>
-                    <option value="Shapes">Shapes</option>
-                    <option value="Names">Names</option>
+                  <optgroup label="Child care ">
+                    <option value="Newborn Sleep & Respiration">Newborn Sleep & Respiration</option>
+                    <option value="Breastfeeding and Nutrition">Breastfeeding and Nutrition</option>
+                    <option value="Parent and Child communication">Parent and Child communication</option>
+                    <option value="Baby’s movement and carrying">Baby’s movement and carrying</option>
+                    
                   </optgroup>
-                  <optgroup label="Swedish Cars">
-                    <option value="Colours">Colours</option>
-                    <option value="Shapes">Shapes</option>
-                    <option value="Names">Names</option>
+                  <optgroup label="Parental care">
+                    <option value="Pre-natal / Birth preparation for parents">Pre-natal / Birth preparation for parents</option>
+                    <option value="Post-natal ">Post-natal </option>
+                  </optgroup>
+                  <optgroup label="Baby and Parents Care">
+                    <option value="Baby and Parents Care">Baby and Parents Care</option>
                   </optgroup>
                 </select>
-                  </div>
                 
                 <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
@@ -286,9 +279,9 @@
 
 
   function configureDropDownLists(ddl1, ddl2) {
-  var colours = ['Black', 'White', 'Blue'];
-  var shapes = ['Square', 'Circle', 'Triangle'];
-  var names = ['John', 'David', 'Sarah'];
+  var newborn_sleep = ['Baby sleep specialist', 'Newborn rhythms', 'Respiratory physiotherapy'];
+  var breastfeedingNutrition = ['Lactation consultant', 'Weaning', 'Breastfeeding and feeding of newborns'];
+  var parentCommunication = ['Speech therapist', 'Baby/Parent communication therapist', 'Logopaedist'];
 
   switch (ddl1.value) {
     case 'Colours':
