@@ -32,12 +32,10 @@ h5 {
     margin-top: 5px;
 }
 .center {
-    border: 3px solid rgb(94, 94, 166);
-    border-radius: 5px;
     margin: auto;
     width: 100%;
     padding: 10px;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
