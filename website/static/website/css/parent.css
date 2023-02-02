@@ -13,8 +13,7 @@ div.home {
 }
 h1,h3,h4 {
     color:rgb(41, 27, 115);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family:'Times New Roman', Times, serif;
 }
 h6 {
     color:rgb(74, 74, 210)

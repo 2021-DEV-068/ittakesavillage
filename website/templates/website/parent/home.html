@@ -39,7 +39,7 @@
                 <span class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <select class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
+                <select style="min-width: 75%;" class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
                 
                   <optgroup label="Child care ">
                     <option value="newborn_sleep">Newborn Sleep & Respiration</option>
@@ -97,11 +97,11 @@
             </div>
 
             <div class="col-md-3">
-              <div  style="margin-left:53%;" class="input-group input-group-lg mb-3">
+              <div style="margin-left:10%;" class="input-group input-group-lg mb-3">
                 <span style="width: 125%;" class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
-                <select class="input-group-text" id="ddl2" data-mdb-toggle="dropdown" aria-expanded="false">
+                <select style="min-width: 75%;" class="input-group-text" id="ddl2" data-mdb-toggle="dropdown" aria-expanded="false">
                  
                   </select> 
                 <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
@@ -112,16 +112,16 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div  style="margin-left:50%;" class="input-group input-group-lg mb-3">
+              <div style="padding-left: 15%;" class="input-group input-group-lg mb-3">
                 <span class="input-group-text">
                   <i class="bi bi-geo-alt-fill"></i>
                 </span>
-                <select class="form-select" id="input-city"> {% for option_city in form.city|dictsort:'data.label' %} <option value="{{ option_city }}"></option> {% endfor %} </select>
+                <select style="min-width: 75%;" class="form-select" id="input-city"> {% for option_city in form.city|dictsort:'data.label' %} <option value="{{ option_city }}"></option> {% endfor %} </select>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="input-group input-group-lg mb-3">
-                <button style="height: 42px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+              <div style="padding-left: 15%;" class="input-group input-group-lg mb-3">
+                <button style="height: 42px; width: 100px; margin-top: 1px; margin-left: 0px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
               </div>
             </div>
           </div>
@@ -129,10 +129,9 @@
       </div>
     </div>
   </div>
-  <!--<div class="col-md-8 text-end"><img src="{% static "website/img/happy_family.jpg" %}" class="img-fluid" alt=""></div>-->
 </div>
 <div class="container-fluid">
-  <div class="row mt-3 mx-3">
+  < class="row mt-3 mx-3">
     <div class="col-md-5 my-auto">
       <h1 class="text-brown">ARE YOU PREGNANT? ARE YOU A PARENT?</h1>
       <h6>FIND HELP AND SUPPORT</h6>
@@ -202,7 +201,7 @@
     <br>
     <div class="row mt-3 mx-3">
       <h3 class="text-center">WHAT YOU WILL FIND</h3>
-      <div style="background-color:rgb(232, 232, 243)"  class="center"></div>
+      <div style="background-color:rgb(232, 232, 243)"  class="center">
       <ul>
         <li>Early childhood healthcare professionals</li>
         <li>Support for the whole family</li>
@@ -219,7 +218,7 @@
         <li>A phone number you can call 24/7 to ask your urgent questions (coming soon)</li>
         <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
       </ul>
-    </div>
+      </div>
     </div>
   </div>
   <script>
