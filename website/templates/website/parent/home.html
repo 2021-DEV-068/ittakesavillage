@@ -234,7 +234,7 @@
       ul.className = 'dropdown-menu';
       ul.setAttribute('aria-labelledby', 'dropdownMenuButton2');
       list.innerHTML = '';
-      UpdateListener();
+      
       for (var i = 0; i < arry2[0].value.length; i++) {
         var li = document.createElement('li');
         var link = document.createElement("a");
@@ -243,6 +243,7 @@
         link.className = "dropdown-item";
         li.appendChild(link);
         list.appendChild(li);
+        UpdateListener();
       }
       var children = list.children;
       for (var i = 0; i < children.length; i++) {
@@ -274,7 +275,7 @@
  }
 }
 
-  UpdateListener();
+ 
     
   </script>
          
