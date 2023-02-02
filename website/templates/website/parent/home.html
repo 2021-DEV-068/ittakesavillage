@@ -88,9 +88,9 @@
                 <input class="input-group-text" id="dropdownMenuButton2" data-mdb-toggle="dropdown" aria-expanded="false">
                 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                  <li>
-                    <a class="dropdown-item" href="#">Action</a>
-                  </li>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </ul>
               </div>
             </div>
@@ -234,6 +234,7 @@
       ul.className = 'dropdown-menu';
       ul.setAttribute('aria-labelledby', 'dropdownMenuButton2');
       list.innerHTML = '';
+      UpdateListener();
       for (var i = 0; i < arry2[0].value.length; i++) {
         var li = document.createElement('li');
         var link = document.createElement("a");
@@ -258,6 +259,23 @@
       //this line is to watch the result in console , you can remove it later	
       console.log("Refreshed");
     }
+
+    function UpdateListener(){
+    var li = document.querySelectorAll('li');
+    var total = document.querySelectorAll('li').length;
+
+ for(let i=0 ; i< total ; i++)
+ {
+    li[i].addEventListener('click',() => {  
+
+    head.innerHTML = li[i].innerHTML
+
+    });
+ }
+}
+
+  UpdateListener();
+    
   </script>
          
 {% endblock content %}
