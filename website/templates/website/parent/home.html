@@ -40,7 +40,7 @@
                   <i class="bi bi-search"></i>
                 </span>
                 <select style="min-width: 75%;" class="input-group-text" id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))" data-mdb-toggle="dropdown" aria-expanded="false" placeholder="lactation, massage, natal ...">
-                  <option value="empty"></option>
+                  <option value="empty" title="Choose a specialist"></option>
                   <optgroup label="Child care ">
                     <option value="newborn_sleep">Newborn Sleep & Respiration</option>
                     <option value="breastfeedingNutrition">Breastfeeding and Nutrition</option>
@@ -49,7 +49,7 @@
                     
                   </optgroup>
                   <optgroup label="Parental care">
-                    <option value="prenatalParents">Pre-natal / Birth preparation for parents</option>
+                    <option value="prenatalPreparation">Pre-natal / Birth preparation for parents</option>
                     <option value="postNatal">Post-natal </option>
                   </optgroup>
                   <optgroup label="babyCare">
@@ -116,7 +116,7 @@
                 <span class="input-group-text">
                   <i class="bi bi-geo-alt-fill"></i>
                 </span>
-                <select style="min-width: 75%;" class="form-select" id="input-city"> {% for option_city in form.city|dictsort:'data.label' %} <option value="{{ option_city }}"></option> {% endfor %} </select>
+                <select style="min-width: 75%;" class="form-select" id="input-city"> {% for option_city in form.city|dictsort:'data.label' %} <option value="{{ option_city }}" title="Select a location"></option> {% endfor %} </select>
               </div>
             </div>
             <div class="col-md-3">
@@ -283,6 +283,14 @@
   var newborn_sleep = ['Baby sleep specialist', 'Newborn rhythms', 'Respiratory physiotherapy'];
   var breastfeedingNutrition = ['Lactation consultant', 'Weaning', 'Breastfeeding and feeding of newborns'];
   var parentCommunication = ['Speech therapist', 'Baby/Parent communication therapist', 'Logopaedist'];
+  var babyCarrying = ['Baby massage sessions', 'Psychometrician', 'Baby physical therapist', 'Physiological carrying', 'Fascio therapy', 'Paediatric osteopath', 'Paediatric physiotherapist', 'Neuro-developmental disorders'];
+  var prenatalPreparation = ['Doula pre-natal', 'Midwife', 'Pre-natal consultation','Comprehensive birth preparation','Hypnobirthing childbirth educator','Haptonomy (involves both parents)','Massage for pregnant women', 'Pre-natal yoga', 'Sexology during pregnancy', 'Pre-natal physical therapist', 'Perinatal psychologist', 'Preparation for birth - Newborn sleep', 'Homeopathy pregnancy','Perinatal nutritionist'];
+  var postNatal = ['Doula post-natal', 'Post-Partum depression (baby blues) consultant', 'Post-natal yoga','Sexology postpartum', 'Perinatal psychologist','Post-natal follow-up at home','Scar tissue massage', 'Couple therapy around parenting', 'Contraception','Parental coach','Child education consultant','Adult nutritionist'];
+  var babyParentsCare = ['Energetic and rebozzo treatments', 'Bach flower advisor', 'Herbalist'];
+
+
+
+
 
   switch (ddl1.value) {
     case 'newborn_sleep':
@@ -301,6 +309,30 @@
       ddl2.options.length = 0;
       for (i = 0; i < parentCommunication.length; i++) {
         createOption(ddl2, parentCommunication[i], parentCommunication[i]);
+      }
+      break;
+      case 'babyCarrying':
+      ddl2.options.length = 0;
+      for (i = 0; i < babyCarrying.length; i++) {
+        createOption(ddl2, babyCarrying[i], babyCarrying[i]);
+      }
+      break;
+    case 'prenatalPreparation':
+      ddl2.options.length = 0;
+      for (i = 0; i < prenatalPreparation.length; i++) {
+        createOption(ddl2, prenatalPreparation[i], prenatalPreparation[i]);
+      }
+      break;
+    case 'postNatal':
+      ddl2.options.length = 0;
+      for (i = 0; i < postNatal.length; i++) {
+        createOption(ddl2, postNatal[i], postNatal[i]);
+      }
+      break;
+    case 'babyParentsCare':
+      ddl2.options.length = 0;
+      for (i = 0; i < babyParentsCare.length; i++) {
+        createOption(ddl2, babyParentsCare[i], babyParentsCare[i]);
       }
       break;
     default:
