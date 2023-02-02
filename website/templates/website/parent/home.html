@@ -97,8 +97,8 @@
             </div>
 
             <div class="col-md-3">
-              <div class="input-group input-group-lg mb-3">
-                <span class="input-group-text">
+              <div  style="margin-left:53%;" class="input-group input-group-lg mb-3">
+                <span style="width: 125%;" class="input-group-text">
                   <i class="bi bi-search"></i>
                 </span>
                 <select class="input-group-text" id="ddl2" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -112,7 +112,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="input-group input-group-lg mb-3">
+              <div  style="margin-left:50%;" class="input-group input-group-lg mb-3">
                 <span class="input-group-text">
                   <i class="bi bi-geo-alt-fill"></i>
                 </span>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-md-3">
               <div class="input-group input-group-lg mb-3">
-                <button style="height: 41px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+                <button style="height: 42px; width: 100px; margin-top: 2px; margin-left: 10px;" type="submit" class="btn btn-primary">{% trans "Search" %}</button>
               </div>
             </div>
           </div>
@@ -202,6 +202,7 @@
     <br>
     <div class="row mt-3 mx-3">
       <h3 class="text-center">WHAT YOU WILL FIND</h3>
+      <div style="background-color:rgb(232, 232, 243)"  class="center"></div>
       <ul>
         <li>Early childhood healthcare professionals</li>
         <li>Support for the whole family</li>
@@ -216,9 +217,10 @@
         <li>Find pre- and post-natal workshops (coming soon)</li>
         <li>A space to meet and connect with other parents (coming soon)</li>
         <li>A phone number you can call 24/7 to ask your urgent questions (coming soon)</li>
+        <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
       </ul>
     </div>
-    <a style="width: 100px; margin-left: 40px;" class="btn btn-primary" href="{% url 'parent:signup' %}" role="button">{% trans 'Join US' %}</a>
+    </div>
   </div>
   <script>
     let arry2 = [];
