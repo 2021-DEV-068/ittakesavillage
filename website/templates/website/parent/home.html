@@ -49,11 +49,11 @@
                     
                   </optgroup>
                   <optgroup label="Parental care">
-                    <option value="Pre-natal / Birth preparation for parents">Pre-natal / Birth preparation for parents</option>
-                    <option value="Post-natal ">Post-natal </option>
+                    <option value="prenatalParents">Pre-natal / Birth preparation for parents</option>
+                    <option value="postNatal">Post-natal </option>
                   </optgroup>
-                  <optgroup label="Baby and Parents Care">
-                    <option value="Baby and Parents Care">Baby and Parents Care</option>
+                  <optgroup label="babyCare">
+                    <option value="babyParentsCare">Baby and Parents Care</option>
                   </optgroup>
                 </select>
                 
@@ -284,22 +284,22 @@
   var parentCommunication = ['Speech therapist', 'Baby/Parent communication therapist', 'Logopaedist'];
 
   switch (ddl1.value) {
-    case 'Colours':
+    case 'newborn_sleep':
       ddl2.options.length = 0;
-      for (i = 0; i < colours.length; i++) {
-        createOption(ddl2, colours[i], colours[i]);
+      for (i = 0; i < newborn_sleep.length; i++) {
+        createOption(ddl2, newborn_sleep[i], newborn_sleep[i]);
       }
       break;
-    case 'Shapes':
+    case 'breastfeedingNutrition':
       ddl2.options.length = 0;
-      for (i = 0; i < shapes.length; i++) {
-        createOption(ddl2, shapes[i], shapes[i]);
+      for (i = 0; i < breastfeedingNutrition.length; i++) {
+        createOption(ddl2, breastfeedingNutrition[i], breastfeedingNutrition[i]);
       }
       break;
-    case 'Names':
+    case 'parentCommunication':
       ddl2.options.length = 0;
-      for (i = 0; i < names.length; i++) {
-        createOption(ddl2, names[i], names[i]);
+      for (i = 0; i < parentCommunication.length; i++) {
+        createOption(ddl2, parentCommunication[i], parentCommunication[i]);
       }
       break;
     default:
