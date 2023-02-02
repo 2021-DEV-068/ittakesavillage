@@ -16,27 +16,23 @@ ul {
   }
 
 
-h1,h3 {
-  color:rgb(41, 27, 115);
-  font-family:Georgia, 'Times New Roman', Times, serif;
+h1,h3,h4 {
+    color:rgb(41, 27, 115);
+    font-family:'Times New Roman', Times, serif;
 }
 h6 {
-  color:rgb(74, 74, 210)
+    color:rgb(74, 74, 210)
 }
 h5 {
-  color:rgb(14, 86, 153);
-}
-h2 {
-  color:rgb(41, 27, 115);
-  font-family: "Brush Script MT", "Lucida Handwriting", Cursive;
+    color:rgb(14, 86, 153);
 }
 .logo {
-  height: 8%;
-  width: 8%;
+    height: 9%;
+    width: 9%;
 }
 .d-flex{
-  margin-top: 5px;
+    margin-top: 5px;
 }
 #find{
-  margin-top: 5px;
+    margin-top: 5px;
 }
